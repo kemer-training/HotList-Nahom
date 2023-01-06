@@ -18,6 +18,9 @@ class AppsViewController: UIViewController{
         tableView.dataSource = self
         
         tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
+        
+        let cellNib = UINib(nibName: "HotListCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "HotListCell")
     }
     
 }
@@ -28,8 +31,10 @@ extension AppsViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "appCell", for: indexPath)
-        cell.textLabel?.text = "App \(indexPath.row+1)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HotListCell", for: indexPath) as! HotListTableViewCell
+
+        cell.titleLabel.text = "Youtube"
+        cell.artistNameLabel.text = "Youtube"
         return cell
     }
 }
