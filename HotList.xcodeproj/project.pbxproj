@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		F5253946296727BC002E6CC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5253945296727BC002E6CC5 /* AppDelegate.swift */; };
 		F5253948296727BC002E6CC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5253947296727BC002E6CC5 /* SceneDelegate.swift */; };
-		F525394A296727BC002E6CC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5253949296727BC002E6CC5 /* ViewController.swift */; };
 		F525394D296727BC002E6CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F525394B296727BC002E6CC5 /* Main.storyboard */; };
 		F525394F296727BE002E6CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F525394E296727BE002E6CC5 /* Assets.xcassets */; };
 		F5253952296727BE002E6CC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5253950296727BE002E6CC5 /* LaunchScreen.storyboard */; };
+		F5CEDE5E29675ED100986273 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CEDE5D29675ED100986273 /* MusicViewController.swift */; };
+		F5CEDE602967617B00986273 /* PodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CEDE5F2967617B00986273 /* PodcastsViewController.swift */; };
+		F5CEDE62296761CA00986273 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CEDE61296761CA00986273 /* AppsViewController.swift */; };
+		F5CEDE64296761F100986273 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CEDE63296761F100986273 /* BooksViewController.swift */; };
+		F5CEDE66296761FE00986273 /* AudiobooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CEDE65296761FE00986273 /* AudiobooksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F5253942296727BC002E6CC5 /* HotList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5253945296727BC002E6CC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5253947296727BC002E6CC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5253949296727BC002E6CC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F525394C296727BC002E6CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F525394E296727BE002E6CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5253951296727BE002E6CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5253953296727BE002E6CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5CEDE5D29675ED100986273 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		F5CEDE5F2967617B00986273 /* PodcastsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsViewController.swift; sourceTree = "<group>"; };
+		F5CEDE61296761CA00986273 /* AppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
+		F5CEDE63296761F100986273 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		F5CEDE65296761FE00986273 /* AudiobooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiobooksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +66,11 @@
 			children = (
 				F5253945296727BC002E6CC5 /* AppDelegate.swift */,
 				F5253947296727BC002E6CC5 /* SceneDelegate.swift */,
-				F5253949296727BC002E6CC5 /* ViewController.swift */,
+				F5CEDE5D29675ED100986273 /* MusicViewController.swift */,
+				F5CEDE5F2967617B00986273 /* PodcastsViewController.swift */,
+				F5CEDE61296761CA00986273 /* AppsViewController.swift */,
+				F5CEDE63296761F100986273 /* BooksViewController.swift */,
+				F5CEDE65296761FE00986273 /* AudiobooksViewController.swift */,
 				F525394B296727BC002E6CC5 /* Main.storyboard */,
 				F525394E296727BE002E6CC5 /* Assets.xcassets */,
 				F5253950296727BE002E6CC5 /* LaunchScreen.storyboard */,
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F525394A296727BC002E6CC5 /* ViewController.swift in Sources */,
+				F5CEDE5E29675ED100986273 /* MusicViewController.swift in Sources */,
+				F5CEDE66296761FE00986273 /* AudiobooksViewController.swift in Sources */,
+				F5CEDE62296761CA00986273 /* AppsViewController.swift in Sources */,
 				F5253946296727BC002E6CC5 /* AppDelegate.swift in Sources */,
 				F5253948296727BC002E6CC5 /* SceneDelegate.swift in Sources */,
+				F5CEDE602967617B00986273 /* PodcastsViewController.swift in Sources */,
+				F5CEDE64296761F100986273 /* BooksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
