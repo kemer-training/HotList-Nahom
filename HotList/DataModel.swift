@@ -12,7 +12,6 @@ struct Welcome: Codable{
 }
 
 struct Feed: Codable{
-//    var listCount = 0
     var results: [Result] = []
 }
 
