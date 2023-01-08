@@ -10,7 +10,7 @@ import UIKit
 class HotListTableViewCell: UITableViewCell {
     @IBOutlet weak var artworkImageView: UIImageView!
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

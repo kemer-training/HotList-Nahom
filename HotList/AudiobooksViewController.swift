@@ -32,7 +32,7 @@ extension AudiobooksViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HotListCell", for: indexPath) as! HotListTableViewCell
 
-        cell.titleLabel.text = "Audiobook Name"
+        cell.nameLabel.text = "Audiobook Name"
         cell.artistNameLabel.text = "Artist Name"
         return cell
     }

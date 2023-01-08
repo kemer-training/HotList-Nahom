@@ -46,7 +46,7 @@
                                         <rect key="frame" x="0.0" y="44" width="320" height="44"/>
                                         <items>
                                             <barButtonItem style="plain" id="Hid-p6-oCU">
-                                                <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="fsL-ww-MZC">
+                                                <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="fsL-ww-MZC">
                                                     <rect key="frame" x="16" y="5.5" width="288" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <segments>
@@ -71,7 +71,9 @@
                             <constraint firstAttribute="bottom" secondItem="koc-HK-0FU" secondAttribute="bottom" id="QyT-jr-88V"/>
                             <constraint firstItem="koc-HK-0FU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WlP-lr-QEB"/>
                             <constraint firstItem="koc-HK-0FU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XkC-Ih-ClB"/>
+                            <constraint firstItem="koc-HK-0FU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eY4-bh-zTB"/>
                             <constraint firstItem="SqJ-DC-s1G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t6h-gS-5bO"/>
+                            <constraint firstItem="koc-HK-0FU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zmR-hj-y2I"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Music" image="music.note" catalog="system" id="hJ7-mv-Mhv"/>
@@ -226,16 +228,16 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ugt-R9-OEt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fx6-Vo-PU1">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                         <items>
                                             <navigationItem title="Podcast" id="h91-FG-XNI"/>
                                         </items>
                                     </navigationBar>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Noo-Hv-J0d">
-                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="44"/>
                                         <items>
                                             <barButtonItem style="plain" id="sDr-kv-f7M">
                                                 <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="nH5-BK-HzH">

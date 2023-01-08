@@ -33,7 +33,7 @@ extension AppsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HotListCell", for: indexPath) as! HotListTableViewCell
 
-        cell.titleLabel.text = "Youtube"
+        cell.nameLabel.text = "Youtube"
         cell.artistNameLabel.text = "Youtube"
         return cell
     }

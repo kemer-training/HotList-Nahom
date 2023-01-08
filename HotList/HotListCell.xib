@@ -54,7 +54,7 @@
             <connections>
                 <outlet property="artistNameLabel" destination="M57-yj-b0f" id="38m-wl-xRL"/>
                 <outlet property="artworkImageView" destination="Wz1-r0-d9P" id="8NQ-L4-9DO"/>
-                <outlet property="titleLabel" destination="Jd0-Zh-lZW" id="OXF-Vv-sHb"/>
+                <outlet property="nameLabel" destination="Jd0-Zh-lZW" id="jhA-mI-V78"/>
             </connections>
             <point key="canvasLocation" x="226.71755725190837" y="-50"/>
         </tableViewCell>

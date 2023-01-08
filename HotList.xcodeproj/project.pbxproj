@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F50A6B562968A49600D29929 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50A6B552968A49600D29929 /* DataModel.swift */; };
 		F5253946296727BC002E6CC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5253945296727BC002E6CC5 /* AppDelegate.swift */; };
 		F5253948296727BC002E6CC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5253947296727BC002E6CC5 /* SceneDelegate.swift */; };
 		F525394D296727BC002E6CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F525394B296727BC002E6CC5 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F50A6B552968A49600D29929 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		F5253942296727BC002E6CC5 /* HotList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5253945296727BC002E6CC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5253947296727BC002E6CC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				F5253945296727BC002E6CC5 /* AppDelegate.swift */,
 				F5253947296727BC002E6CC5 /* SceneDelegate.swift */,
+				F50A6B552968A49600D29929 /* DataModel.swift */,
 				F5CEDE5D29675ED100986273 /* MusicViewController.swift */,
 				F5CEDE5F2967617B00986273 /* PodcastsViewController.swift */,
 				F5CEDE61296761CA00986273 /* AppsViewController.swift */,
@@ -165,6 +168,7 @@
 				F5CEDE602967617B00986273 /* PodcastsViewController.swift in Sources */,
 				F5CEDE64296761F100986273 /* BooksViewController.swift in Sources */,
 				F5B0CA832968749B0047A1A1 /* HotListTableViewCell.swift in Sources */,
+				F50A6B562968A49600D29929 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

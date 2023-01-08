@@ -34,7 +34,7 @@ extension BooksViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HotListCell", for: indexPath) as! HotListTableViewCell
 
-        cell.titleLabel.text = "Adventures of Sherlock Holmes"
+        cell.nameLabel.text = "Adventures of Sherlock Holmes"
         cell.artistNameLabel.text = "Arthur Conan Doyle"
         return cell
     }

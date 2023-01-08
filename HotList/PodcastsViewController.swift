@@ -33,7 +33,7 @@ extension PodcastsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HotListCell", for: indexPath) as! HotListTableViewCell
 
-        cell.titleLabel.text = "Podcast Name"
+        cell.nameLabel.text = "Podcast Name"
         cell.artistNameLabel.text = "Artist Name"
         return cell
     }
