@@ -30,8 +30,12 @@ enum Podcasts: String{
 
 
 
-class LoadData{
+class LoadData: UIViewController{
     var hotList: [Result] = []
+    var isLoading = true
+    var loadSuccess = false
+    var dataTask: URLSessionDataTask?
+    
     func getUrl(_ mediaType: String, _ feed: String, _ type: String) -> URL?{
         print("getting url")
         let urlString = "https://rss.applemarketingtools.com/api/v2/us/\(mediaType)/\(feed)/10/\(type).json"
@@ -40,29 +44,34 @@ class LoadData{
         return url
     }
     
-    func loadData(mediaType: String, feed: String, type: String, completion: @escaping () -> Void){
+    func loadData(on vc: UIViewController, mediaType: String, feed: String, type: String, completion: @escaping () -> Void){
         
         let url = getUrl(mediaType, feed, type)
         print("loading data")
         let session = URLSession.shared
-        let datatask = session.dataTask(with: url!) { data, response, error in
+        dataTask = session.dataTask(with: url!) { data, response, error in
             print("inside session")
             if let error = error{
-                print("error")
                 print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.showErrorAlert(error, on: vc)
+                }
                 return
             }
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200, let data = data else { return }
-            print("status code 200")
-            DispatchQueue.main.async {
-                print("outside session")
-                self.hotList = self.parse(data: data)
-                completion()
-//                vc.tableView.reloadData()
+            if let response = response as? HTTPURLResponse, response.statusCode != 200{
+                print("Status Code - \(response.statusCode)")
+                return
             }
-            
+            else{
+                DispatchQueue.main.async {
+                    print("outside session")
+                    self.hotList = self.parse(data: data!)
+                    self.loadSuccess = true
+                    completion()
+                }
+            }
         }
-        datatask.resume()
+        dataTask?.resume()
     }
     func parse(data: Data) -> [Result]{
         print("parsing data")
@@ -75,5 +84,16 @@ class LoadData{
             
             return []
         }
+    }
+    
+    func showErrorAlert(_ error: Error, on vc: UIViewController){
+        let alert = UIAlertController(title: "Error", message: "Connect to the Internet", preferredStyle: .alert)
+        alert.message = error.localizedDescription
+        let action1 = UIAlertAction(title: "Try Again", style: .default)
+        alert.addAction(action1)
+        
+        let action2 = UIAlertAction(title: "Cancel", style: .default)
+        alert.addAction(action2)
+        vc.present(alert, animated: true)
     }
 }

@@ -13,6 +13,7 @@
 		F525394D296727BC002E6CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F525394B296727BC002E6CC5 /* Main.storyboard */; };
 		F525394F296727BE002E6CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F525394E296727BE002E6CC5 /* Assets.xcassets */; };
 		F5253952296727BE002E6CC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5253950296727BE002E6CC5 /* LaunchScreen.storyboard */; };
+		F54D4AFA296BFFFB0080F9DC /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54D4AF9296BFFFB0080F9DC /* LoadingCell.xib */; };
 		F5B0CA81296871170047A1A1 /* HotListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B0CA80296871170047A1A1 /* HotListCell.xib */; };
 		F5B0CA832968749B0047A1A1 /* HotListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0CA822968749B0047A1A1 /* HotListTableViewCell.swift */; };
 		F5CEDE5E29675ED100986273 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CEDE5D29675ED100986273 /* MusicViewController.swift */; };
@@ -32,6 +33,7 @@
 		F525394E296727BE002E6CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5253951296727BE002E6CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5253953296727BE002E6CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F54D4AF9296BFFFB0080F9DC /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		F5B0CA80296871170047A1A1 /* HotListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotListCell.xib; sourceTree = "<group>"; };
 		F5B0CA822968749B0047A1A1 /* HotListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotListTableViewCell.swift; sourceTree = "<group>"; };
 		F5CEDE5D29675ED100986273 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				F5CEDE63296761F100986273 /* BooksViewController.swift */,
 				F5CEDE65296761FE00986273 /* AudiobooksViewController.swift */,
 				F5B0CA80296871170047A1A1 /* HotListCell.xib */,
+				F54D4AF9296BFFFB0080F9DC /* LoadingCell.xib */,
 				F5B0CA822968749B0047A1A1 /* HotListTableViewCell.swift */,
 				F525394B296727BC002E6CC5 /* Main.storyboard */,
 				F525394E296727BE002E6CC5 /* Assets.xcassets */,
@@ -152,6 +155,7 @@
 				F5253952296727BE002E6CC5 /* LaunchScreen.storyboard in Resources */,
 				F525394F296727BE002E6CC5 /* Assets.xcassets in Resources */,
 				F525394D296727BC002E6CC5 /* Main.storyboard in Resources */,
+				F54D4AFA296BFFFB0080F9DC /* LoadingCell.xib in Resources */,
 				F5B0CA81296871170047A1A1 /* HotListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
