@@ -60,6 +60,7 @@ extension AppsViewController: UITableViewDelegate, UITableViewDataSource{
         
         cell.nameLabel.text = hotList[indexPath.row].name
         cell.artistNameLabel.text = hotList[indexPath.row].artistName
+        cell.artworkImageView.loadImage(url: hotList[indexPath.row].artworkUrl100!)
         return cell
     }
 }

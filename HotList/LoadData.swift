@@ -44,7 +44,7 @@ class LoadData: UIViewController{
     }
     
     func loadData(on currentViewController: UIViewController, mediaType: String, feed: String, type: String? = nil, completion: @escaping () -> Void){
-        var type = type ?? mediaType
+        let type = type ?? mediaType
         
         let url = getUrl(mediaType, feed, type)
         let session = URLSession.shared
@@ -93,5 +93,33 @@ class LoadData: UIViewController{
         alert.addAction(action2)
         
         vc.present(alert, animated: true)
+    }
+}
+
+extension UIImageView{
+    func loadImage(url: String){
+        var image: UIImage?
+        let url = URL(string: url)
+        let session = URLSession.shared
+        let downloadTask = session.downloadTask(with: url!) { url, _, error in
+            if let error = error{
+                print(error.localizedDescription)
+                return
+            }
+            guard let url = url else { return }
+            do{
+                let data = try Data(contentsOf: url)
+                image = UIImage(data: data)
+            }
+            catch{
+                print("Something went wrong")
+                
+            }
+            DispatchQueue.main.async {
+                self.image = image
+                self.layer.cornerRadius = self.layer.bounds.width / 2
+            }
+        }
+        downloadTask.resume()
     }
 }
