@@ -38,13 +38,16 @@ class LoadData: UIViewController{
     
     func getUrl(_ mediaType: String, _ feed: String, _ type: String) -> URL?{
         print("getting url")
+        
+        
         let urlString = "https://rss.applemarketingtools.com/api/v2/us/\(mediaType)/\(feed)/10/\(type).json"
         
         let url = URL(string: urlString)
         return url
     }
     
-    func loadData(on vc: UIViewController, mediaType: String, feed: String, type: String, completion: @escaping () -> Void){
+    func loadData(on vc: UIViewController, mediaType: String, feed: String, type: String? = nil, completion: @escaping () -> Void){
+        var type = type ?? mediaType
         
         let url = getUrl(mediaType, feed, type)
         print("loading data")

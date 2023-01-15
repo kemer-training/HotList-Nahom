@@ -35,7 +35,7 @@ class BooksViewController: UIViewController{
         super.viewWillAppear(animated)
         if !hotList.isEmpty { return }
         
-        dataLoader.loadData(on: self, mediaType: MediaType.Books.rawValue, feed: "top-free", type: MediaType.Books.rawValue) {
+        dataLoader.loadData(on: self, mediaType: MediaType.Books.rawValue, feed: "top-free") {
             self.dataLoader.isLoading = false
             self.hotList = self.dataLoader.hotList
             self.tableView.reloadData()

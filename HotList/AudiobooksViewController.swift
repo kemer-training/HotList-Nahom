@@ -34,7 +34,7 @@ class AudiobooksViewController: UIViewController{
         super.viewWillAppear(animated)
         if !hotList.isEmpty { return }
         
-        dataLoader.loadData(on: self, mediaType: MediaType.Audiobooks.rawValue, feed: "top", type: MediaType.Audiobooks.rawValue) {
+        dataLoader.loadData(on: self, mediaType: MediaType.Audiobooks.rawValue, feed: "top") {
             self.dataLoader.isLoading = false
             self.hotList = self.dataLoader.hotList
             self.tableView.reloadData()

@@ -34,7 +34,7 @@ class AppsViewController: UIViewController{
         super.viewWillAppear(animated)
         if !hotList.isEmpty { return }
         
-        dataLoader.loadData(on: self, mediaType: MediaType.Apps.rawValue, feed: "top-free", type: MediaType.Apps.rawValue) {
+        dataLoader.loadData(on: self, mediaType: MediaType.Apps.rawValue, feed: "top-free") {
             self.dataLoader.isLoading = false
             self.hotList = self.dataLoader.hotList
             self.tableView.reloadData()
