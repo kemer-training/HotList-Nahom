@@ -55,6 +55,9 @@
                                                         <segment title="Playlists"/>
                                                         <segment title="Songs"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="segmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="4rP-fV-rBS"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </barButtonItem>
                                         </items>
@@ -247,6 +250,9 @@
                                                         <segment title="Podcast Episodes"/>
                                                         <segment title="Podcast"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="segmentedControl:" destination="MyH-Yt-CLQ" eventType="valueChanged" id="UM4-xi-8on"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </barButtonItem>
                                         </items>

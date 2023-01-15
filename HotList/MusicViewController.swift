@@ -35,19 +35,39 @@ class MusicViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if !hotList.isEmpty { return }
-        
-        dataLoader.loadData(on: self, mediaType: MediaType.Music.rawValue, feed: "most-played", type: Music.Albums.rawValue) {
-            self.dataLoader.isLoading = false
-            self.hotList = self.dataLoader.hotList
-            self.tableView.reloadData()
+        if hotList.isEmpty{
+            refreshPage(withFeedsOfType: Music.Albums.rawValue)
         }
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         dataLoader.dataTask?.cancel()
     }
     
+    
+    @IBAction func segmentedControl(_ sender: UISegmentedControl) {
+        var type = ""
+        switch sender.selectedSegmentIndex{
+            case 0: type = Music.Albums.rawValue
+            case 1: type = Music.MusicVideos.rawValue
+            case 2: type = Music.Playlists.rawValue
+            case 3: type = Music.Songs.rawValue
+            default: break
+        }
+        refreshPage(withFeedsOfType: type)
+    }
+    
+    func refreshPage(withFeedsOfType type: String){
+        dataLoader.isLoading = true
+        tableView.reloadData()
+        
+        dataLoader.loadData(on: self, mediaType: MediaType.Music.rawValue, feed: "most-played", type: type) {
+            self.dataLoader.isLoading = false
+            self.hotList = self.dataLoader.hotList
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension MusicViewController: UITableViewDelegate, UITableViewDataSource{

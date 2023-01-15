@@ -32,12 +32,8 @@ class PodcastsViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if !hotList.isEmpty { return }
-        
-        dataLoader.loadData(on: self, mediaType: MediaType.Podcasts.rawValue, feed: "top", type: Podcasts.Podcasts.rawValue) {
-            self.dataLoader.isLoading = false
-            self.hotList = self.dataLoader.hotList
-            self.tableView.reloadData()
+        if hotList.isEmpty{
+            refreshPage(withFeedsOfType: Podcasts.PodcastEpisodes.rawValue)
         }
     }
     
@@ -46,6 +42,26 @@ class PodcastsViewController: UIViewController{
         dataLoader.dataTask?.cancel()
     }
     
+    @IBAction func segmentedControl(_ sender: UISegmentedControl) {
+        var type = ""
+        switch sender.selectedSegmentIndex{
+            case 0: type = Podcasts.PodcastEpisodes.rawValue
+            case 1: type = Podcasts.Podcasts.rawValue
+            default: break
+        }
+        refreshPage(withFeedsOfType: type)
+    }
+    
+    func refreshPage(withFeedsOfType type: String){
+        dataLoader.isLoading = true
+        tableView.reloadData()
+        
+        dataLoader.loadData(on: self, mediaType: MediaType.Podcasts.rawValue, feed: "top", type: type) {
+            self.dataLoader.isLoading = false
+            self.hotList = self.dataLoader.hotList
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension PodcastsViewController: UITableViewDelegate, UITableViewDataSource{

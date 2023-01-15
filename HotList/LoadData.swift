@@ -33,12 +33,9 @@ enum Podcasts: String{
 class LoadData: UIViewController{
     var hotList: [Result] = []
     var isLoading = true
-    var loadSuccess = false
     var dataTask: URLSessionDataTask?
     
     func getUrl(_ mediaType: String, _ feed: String, _ type: String) -> URL?{
-        print("getting url")
-        
         
         let urlString = "https://rss.applemarketingtools.com/api/v2/us/\(mediaType)/\(feed)/10/\(type).json"
         
@@ -46,30 +43,26 @@ class LoadData: UIViewController{
         return url
     }
     
-    func loadData(on vc: UIViewController, mediaType: String, feed: String, type: String? = nil, completion: @escaping () -> Void){
+    func loadData(on currentViewController: UIViewController, mediaType: String, feed: String, type: String? = nil, completion: @escaping () -> Void){
         var type = type ?? mediaType
         
         let url = getUrl(mediaType, feed, type)
-        print("loading data")
         let session = URLSession.shared
+        
         dataTask = session.dataTask(with: url!) { data, response, error in
-            print("inside session")
             if let error = error{
                 print(error.localizedDescription)
                 DispatchQueue.main.async {
-                    self.showErrorAlert(error, on: vc)
+                    self.showErrorAlert(error, on: currentViewController)
                 }
                 return
             }
             if let response = response as? HTTPURLResponse, response.statusCode != 200{
-                print("Status Code - \(response.statusCode)")
                 return
             }
             else{
                 DispatchQueue.main.async {
-                    print("outside session")
                     self.hotList = self.parse(data: data!)
-                    self.loadSuccess = true
                     completion()
                 }
             }
@@ -77,26 +70,28 @@ class LoadData: UIViewController{
         dataTask?.resume()
     }
     func parse(data: Data) -> [Result]{
-        print("parsing data")
         do{
             let decoder = JSONDecoder()
             let list = try decoder.decode(Welcome.self, from: data)
             return list.feed.results
         } catch {
             print("JSON Error -> \(error)")
-            
             return []
         }
     }
     
     func showErrorAlert(_ error: Error, on vc: UIViewController){
-        let alert = UIAlertController(title: "Error", message: "Connect to the Internet", preferredStyle: .alert)
-        alert.message = error.localizedDescription
+        let alert = UIAlertController(
+            title: "Error",
+            message: error.localizedDescription,
+            preferredStyle: .alert)
+        
         let action1 = UIAlertAction(title: "Try Again", style: .default)
         alert.addAction(action1)
         
         let action2 = UIAlertAction(title: "Cancel", style: .default)
         alert.addAction(action2)
+        
         vc.present(alert, animated: true)
     }
 }
