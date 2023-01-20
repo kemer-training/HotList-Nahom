@@ -90,6 +90,14 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource{
         cell.artworkImageView.loadImage(url: hotList[indexPath.row].artworkUrl100!)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailView") as! DetailViewController
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 

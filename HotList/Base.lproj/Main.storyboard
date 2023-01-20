@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Music-->
+        <!--Music View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MusicViewController" customModule="HotList" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="koc-HK-0FU">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="musicCell" id="GpM-gM-WLI">
@@ -31,7 +31,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SqJ-DC-s1G">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="88"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KmW-aJ-Xb3">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -76,19 +76,18 @@
                             <constraint firstItem="koc-HK-0FU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XkC-Ih-ClB"/>
                             <constraint firstItem="koc-HK-0FU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eY4-bh-zTB"/>
                             <constraint firstItem="SqJ-DC-s1G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t6h-gS-5bO"/>
-                            <constraint firstItem="koc-HK-0FU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zmR-hj-y2I"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Music" image="music.note" catalog="system" id="hJ7-mv-Mhv"/>
+                    <navigationItem key="navigationItem" id="sff-S7-ei2"/>
                     <connections>
                         <outlet property="tableView" destination="koc-HK-0FU" id="YMg-GB-GF6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-271.875" y="-16.901408450704224"/>
+            <point key="canvasLocation" x="-272" y="787"/>
         </scene>
-        <!--Apps-->
+        <!--Apps View Controller-->
         <scene sceneID="6sB-cP-X9a">
             <objects>
                 <viewController id="xfS-Nj-tow" customClass="AppsViewController" customModule="HotList" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f0T-p8-6bC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="appCell" id="5Ey-Xn-AgB">
@@ -111,7 +110,7 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUI-Xp-nKn">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Apps" id="C95-v8-Ifa"/>
                                 </items>
@@ -129,16 +128,31 @@
                             <constraint firstItem="SUI-Xp-nKn" firstAttribute="trailing" secondItem="8hR-Yj-zV4" secondAttribute="trailing" id="vga-HC-wgV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Apps" image="apps.iphone" catalog="system" id="Ngi-7a-BcU"/>
+                    <navigationItem key="navigationItem" id="mYe-cx-DYY"/>
                     <connections>
                         <outlet property="tableView" destination="f0T-p8-6bC" id="ewp-cv-Qol"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bz-8G-inF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1118" y="-16"/>
+            <point key="canvasLocation" x="1118" y="787"/>
         </scene>
-        <!--Books-->
+        <!--Detail View Controller-->
+        <scene sceneID="NsB-qO-hDc">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="pkL-ij-Fvk" customClass="DetailViewController" customModule="HotList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vMG-Fb-AYS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="5T4-5x-7uh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bk6-Jd-Er8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="1629"/>
+        </scene>
+        <!--Books View Controller-->
         <scene sceneID="D3i-fm-Mnv">
             <objects>
                 <viewController id="TSq-MA-xtY" customClass="BooksViewController" customModule="HotList" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wIy-9b-M0T">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookCell" id="mES-8w-G2T">
@@ -161,7 +175,7 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzR-dN-WdK">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Books" id="1JY-Vq-mKz"/>
                                 </items>
@@ -179,14 +193,14 @@
                             <constraint firstItem="wIy-9b-M0T" firstAttribute="leading" secondItem="rzk-xc-0AI" secondAttribute="leading" id="dV6-gj-cRr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Books" image="book" catalog="system" id="iHr-iL-Z6C"/>
+                    <navigationItem key="navigationItem" id="Exs-ld-trV"/>
                     <connections>
                         <outlet property="tableView" destination="wIy-9b-M0T" id="fB4-gl-I7H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNt-bk-yNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1816" y="-16"/>
+            <point key="canvasLocation" x="1809" y="787"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bbL-Fp-g1i">
@@ -197,18 +211,18 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="kMN-zf-z15"/>
-                        <segue destination="MyH-Yt-CLQ" kind="relationship" relationship="viewControllers" id="EAG-B5-XBP"/>
-                        <segue destination="xfS-Nj-tow" kind="relationship" relationship="viewControllers" id="I4n-uR-nJq"/>
-                        <segue destination="TSq-MA-xtY" kind="relationship" relationship="viewControllers" id="FAS-O4-EpF"/>
-                        <segue destination="LGu-0Y-DHn" kind="relationship" relationship="viewControllers" id="2PP-cZ-fdR"/>
+                        <segue destination="ksF-gN-0gB" kind="relationship" relationship="viewControllers" id="kMN-zf-z15"/>
+                        <segue destination="MFZ-Vg-CN4" kind="relationship" relationship="viewControllers" id="EAG-B5-XBP"/>
+                        <segue destination="KeA-SB-z80" kind="relationship" relationship="viewControllers" id="I4n-uR-nJq"/>
+                        <segue destination="hgN-Ao-B7s" kind="relationship" relationship="viewControllers" id="FAS-O4-EpF"/>
+                        <segue destination="6Xd-P3-MT2" kind="relationship" relationship="viewControllers" id="2PP-cZ-fdR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpz-Sp-RKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1118" y="-893"/>
         </scene>
-        <!--Podcasts-->
+        <!--Podcasts View Controller-->
         <scene sceneID="6eV-AQ-TCd">
             <objects>
                 <viewController id="MyH-Yt-CLQ" customClass="PodcastsViewController" customModule="HotList" customModuleProvider="target" sceneMemberID="viewController">
@@ -217,7 +231,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MSa-y1-WyM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="podcastCell" id="QDK-uG-AHj">
@@ -231,7 +245,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ugt-R9-OEt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="94"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fx6-Vo-PU1">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -243,7 +257,7 @@
                                         <rect key="frame" x="0.0" y="50" width="320" height="44"/>
                                         <items>
                                             <barButtonItem style="plain" id="sDr-kv-f7M">
-                                                <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="nH5-BK-HzH">
+                                                <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="nH5-BK-HzH">
                                                     <rect key="frame" x="16" y="5.5" width="288" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <segments>
@@ -272,16 +286,16 @@
                             <constraint firstAttribute="bottom" secondItem="MSa-y1-WyM" secondAttribute="bottom" id="ekD-Dx-8hu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Podcasts" image="headphones" catalog="system" id="78A-9S-czA"/>
+                    <navigationItem key="navigationItem" id="xVv-Ap-vgG"/>
                     <connections>
                         <outlet property="tableView" destination="MSa-y1-WyM" id="01D-bC-jXs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8sT-M8-j0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="430" y="-16"/>
+            <point key="canvasLocation" x="439" y="787"/>
         </scene>
-        <!--Audiobooks-->
+        <!--Audiobooks View Controller-->
         <scene sceneID="PCM-Qw-52h">
             <objects>
                 <viewController id="LGu-0Y-DHn" customClass="AudiobooksViewController" customModule="HotList" customModuleProvider="target" sceneMemberID="viewController">
@@ -290,7 +304,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OZr-Ep-PUp">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="audiobookCell" id="e1f-RP-YHU">
@@ -304,7 +318,7 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7c9-Nt-Zrd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Audiobooks" id="7TM-s5-aLh"/>
                                 </items>
@@ -322,14 +336,109 @@
                             <constraint firstItem="7c9-Nt-Zrd" firstAttribute="trailing" secondItem="IMe-Dt-Uxr" secondAttribute="trailing" id="tOb-0Q-QFw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Audiobooks" image="book.closed" catalog="system" id="4Wb-0Z-boH"/>
+                    <navigationItem key="navigationItem" id="uin-78-WUc"/>
                     <connections>
                         <outlet property="tableView" destination="OZr-Ep-PUp" id="cAU-ln-yBh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jyw-r9-xdR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="-16"/>
+            <point key="canvasLocation" x="2513" y="787"/>
+        </scene>
+        <!--Music-->
+        <scene sceneID="lfE-gv-L3N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ksF-gN-0gB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Music" image="music.note" catalog="system" id="hJ7-mv-Mhv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MFw-a8-U4K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3Rd-6G-57K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vt9-Di-gNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271.875" y="-16.901408450704224"/>
+        </scene>
+        <!--Podcasts-->
+        <scene sceneID="Z2R-9J-GJ3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MFZ-Vg-CN4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Podcasts" image="headphones" catalog="system" id="78A-9S-czA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Eb-85-2m6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MyH-Yt-CLQ" kind="relationship" relationship="rootViewController" id="fNi-xT-Hut"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BPs-Nr-2Tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439" y="-19"/>
+        </scene>
+        <!--Apps-->
+        <scene sceneID="DWr-Ir-JMI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KeA-SB-z80" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Apps" image="apps.iphone" catalog="system" id="Ngi-7a-BcU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BgZ-YI-vgN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xfS-Nj-tow" kind="relationship" relationship="rootViewController" id="lOc-uG-2oj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M89-AY-D6w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="-19"/>
+        </scene>
+        <!--Books-->
+        <scene sceneID="Fn9-OX-vXG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hgN-Ao-B7s" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Books" image="book" catalog="system" id="iHr-iL-Z6C"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fBM-dq-0ra">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TSq-MA-xtY" kind="relationship" relationship="rootViewController" id="FQS-0j-X7D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="APN-kz-uBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1811" y="-19"/>
+        </scene>
+        <!--Audiobooks-->
+        <scene sceneID="aX8-1w-uOe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Xd-P3-MT2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Audiobooks" image="book.closed" catalog="system" id="4Wb-0Z-boH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Q7-UN-rmG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LGu-0Y-DHn" kind="relationship" relationship="rootViewController" id="0Tk-cB-F7R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fml-HI-yyF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2513" y="-19"/>
         </scene>
     </scenes>
     <resources>

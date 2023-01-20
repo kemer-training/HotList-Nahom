@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F50A6B562968A49600D29929 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50A6B552968A49600D29929 /* DataModel.swift */; };
+		F5103A1E297A99BC0025323B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5103A1D297A99BC0025323B /* DetailViewController.swift */; };
 		F5253946296727BC002E6CC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5253945296727BC002E6CC5 /* AppDelegate.swift */; };
 		F5253948296727BC002E6CC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5253947296727BC002E6CC5 /* SceneDelegate.swift */; };
 		F525394D296727BC002E6CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F525394B296727BC002E6CC5 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		F50A6B552968A49600D29929 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		F5103A1D297A99BC0025323B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F5253942296727BC002E6CC5 /* HotList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5253945296727BC002E6CC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5253947296727BC002E6CC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				F54D4AF9296BFFFB0080F9DC /* LoadingCell.xib */,
 				F5B0CA822968749B0047A1A1 /* HotListTableViewCell.swift */,
 				F525394B296727BC002E6CC5 /* Main.storyboard */,
+				F5103A1D297A99BC0025323B /* DetailViewController.swift */,
 				F525394E296727BE002E6CC5 /* Assets.xcassets */,
 				F5253950296727BE002E6CC5 /* LaunchScreen.storyboard */,
 				F5253953296727BE002E6CC5 /* Info.plist */,
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5103A1E297A99BC0025323B /* DetailViewController.swift in Sources */,
 				F5CEDE5E29675ED100986273 /* MusicViewController.swift in Sources */,
 				F5DA2CED296B673A00908B44 /* LoadData.swift in Sources */,
 				F5CEDE66296761FE00986273 /* AudiobooksViewController.swift in Sources */,
