@@ -21,7 +21,7 @@ class MusicViewController: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.contentInset = UIEdgeInsets(top: 88, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
         
         let hotListCellNib = UINib(nibName: "HotListCell", bundle: nil)
         tableView.register(hotListCellNib, forCellReuseIdentifier: "HotListCell")
@@ -29,8 +29,7 @@ class MusicViewController: UIViewController{
         let loadingCellNib = UINib(nibName: "LoadingCell", bundle: nil)
         tableView.register(loadingCellNib, forCellReuseIdentifier: "LoadingCell")
         
-
-        
+        navigationItem.title = "Music"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -95,7 +94,8 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource{
         tableView.deselectRow(at: indexPath, animated: true)
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailView") as! DetailViewController
-        
+
+        vc.hotListItem = hotList[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 }

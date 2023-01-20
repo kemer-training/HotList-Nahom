@@ -20,7 +20,7 @@ class BooksViewController: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
+//        tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
         
         let cellNib = UINib(nibName: "HotListCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "HotListCell")
@@ -28,7 +28,7 @@ class BooksViewController: UIViewController{
         let loadingCellNib = UINib(nibName: "LoadingCell", bundle: nil)
         tableView.register(loadingCellNib, forCellReuseIdentifier: "LoadingCell")
         
-        
+        navigationItem.title = "Books"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,5 +69,13 @@ extension BooksViewController: UITableViewDelegate, UITableViewDataSource{
         cell.artistNameLabel.text = hotList[indexPath.row].artistName
         cell.artworkImageView.loadImage(url: hotList[indexPath.row].artworkUrl100!)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailView") as! DetailViewController
+        vc.hotListItem = hotList[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
