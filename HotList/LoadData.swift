@@ -98,6 +98,7 @@ class LoadData: UIViewController{
 
 extension UIImageView{
     func loadImage(url: String){
+        
         var image: UIImage?
         let url = URL(string: url)
         let session = URLSession.shared
@@ -120,6 +121,7 @@ extension UIImageView{
                 self.layer.cornerRadius = self.layer.bounds.width / 2
             }
         }
+        self.image = UIImage(systemName: "circle")
         downloadTask.resume()
     }
 }
